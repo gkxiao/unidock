@@ -11,5 +11,6 @@
 </ul>
 <p>These updates address issues where inappropriate torsional degrees of freedom were assigned, leading to unrealistic ligand conformations during the docking process.</p>
 </blockquote>
-<p>Here is an example to show the difference:</p
+<p>Here is an example to show the difference:</p>
+
 ![image](https://github.com/gkxiao/unidock_ligand_preparation/blob/main/build_tree_58_rev.jpg)
