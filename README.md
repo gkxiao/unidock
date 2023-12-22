@@ -13,4 +13,4 @@
 </blockquote>
 <p>Here is an example to show the difference:</p>
 
-![image](https://github.com/gkxiao/unidock_ligand_preparation/blob/main/build_tree_58_rev.jpg)
+![tree comparison](https://github.com/gkxiao/unidock_ligand_preparation/blob/main/build_tree_58_rev.jpg)
