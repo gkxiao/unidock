@@ -14,4 +14,4 @@
 <p>Here is an example to show the difference:</p>
 
 ![tree comparison](https://github.com/gkxiao/unidock_ligand_preparation/blob/main/build_tree_58_rev.jpg)
-<p>Figure. Left:before the revision; Middle: Meeko; Right: after the revision</p>
+<p>Figure 1. Left:before the revision;  Middle: Meeko;  Right: after the revision</p>
