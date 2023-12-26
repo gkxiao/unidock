@@ -43,11 +43,12 @@
       cat $file >> actives_dock.sdf
     done
 </pre>
+<p>Because the bond length and oriention of non-polar hydrogens are meaningless, they need to be removed and then added.</p>
 <p>Remove hydrogen with openbabel:</p>
 <pre lang="shell">
-    obabtl -isdf actives_dock.sdf -osdf -O actives_dock_noH.sdf -d
+    obabel -isdf actives_dock.sdf -osdf -O actives_dock_noH.sdf -d
 </pre>
 <p>Add hydrogens with openbabel:</p>
 <pre lang="shell">
-    obabtl -isdf actives_dock_noH.sdf -osdf -O actives_dock_addH.sdf -h
+    obabel -isdf actives_dock_noH.sdf -osdf -O actives_dock_addH.sdf -h
 </pre>
