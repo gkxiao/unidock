@@ -15,3 +15,39 @@
 
 ![tree comparison](https://github.com/gkxiao/unidock_ligand_preparation/blob/main/build_tree_58_rev.jpg)
 <p>Figure 1. Left:before the revision;  Middle: Meeko;  Right: after the revision</p>
+
+<h2>ligand preparation</h2>
+<h3>Translate SDF into Unidock-style SDF</h3>
+<pre lang="shell">
+    sdf2unidocksdf.py actives_final.sdf actives_prep.sdf
+</pre>
+<h3>Split sdf file</h3>
+<pre lang="shell">
+    obabel -isdf actives_prep.sdf -osdf -O actives/actives-.sdf -m
+</pre>
+<h3>Generate ligand index</h3>
+<pre lang="shell">
+    ls actives/*.sdf >> actives.index
+</pre>
+
+<h2>Docking with fast mode</h2>
+<pre lang="shell">
+    unidock --config dock.conf --ligand_index actives.index --dir actives_out --search_mode fast
+</pre>
+
+<h2>Post-docking</h2>
+<p>Collect the docking results:</p>
+<pre lang="shell">
+    for file in actives_out/*.sdf
+    do
+      cat $file >> actives_dock.sdf
+    done
+</pre>
+<p>Remove hydrogen with openbabel:</p>
+<pre lang="shell">
+    obabtl -isdf actives_dock.sdf -osdf -O actives_dock_noH.sdf -d
+</pre>
+<p>Add hydrogens with openbabel:</p>
+<pre lang="shell">
+    obabtl -isdf actives_dock_noH.sdf -osdf -O actives_dock_addH.sdf -h
+</pre>
