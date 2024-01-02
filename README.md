@@ -52,3 +52,32 @@
 <pre lang="shell">
     obabel -isdf actives_dock_noH.sdf -osdf -O actives_dock_addH.sdf -h
 </pre>
+<h2>Bias docking</h2>
+<p>The user must prepare a bias parameter file (BPF) containing all the information for the different biases to be applied. The BPF contains one line for each bias, with the following parameters: </p>
+<ul>
+   <li>(x, y, z) coordinates in Å,</li> 
+   <li>energy reward ( V set ) in kcal/mol,</li> 
+   <li>decay radius ( r ) in Å,</li>
+   <li>type of bias ( don , acc , aro or map ).</li> 
+</ul>
+<p>The following type of biases are available:</p>
+<ul>
+   <li>hydrogen bond donor = don , </li> 
+   <li>hydrogen bond acceptor = acc , </li> 
+   <li>aromatic = aro, </li>
+   <li>specific bias according to the desired map = map </li> 
+</ul>
+<p>Two examples of bias parameter files are shown below: </p>
+<p>i) Bias parameter file with traditional interaction biases</p> 
+<pre lang="python">
+x y z Vset r type 
+33.682 36.327 34.471 -1.50 0.80 acc 
+34.557 36.028 31.933 -2.00 0.60 don 
+36.905 36.534 30.560 -1.75 1.00 aro
+</pre>
+<p>ii) Bias parameter file with specific map biases</p>
+<pre lang="python">
+x y z Vset r type 
+5.100 1.785 20.019 -1.75 1.10 map 
+9.459 2.075 24.527 -2.00 0.80 map
+</pre>
