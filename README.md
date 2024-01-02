@@ -91,3 +91,7 @@ x y z Vset r type
    <li>The last column indicates the type of bias and, in consequence, which energy maps will be modified: (1)acc modifies NA and OA maps;(2) don modifies HD maps; (3)aro creates an ad hoc new map (AC, aromatic center map) ;(4)map modifies the energy map specified in the -m argument.IMPORTANT: map biases
 cannot be combined with other types of biases ( don , acc , aro ) in the same execution of the program.</li>
 </ul>
+<p>Bias-docking example:</p>
+<pre lang="shell">
+    unidock --config dock.conf --ligand_index actives.index --dir actives_out --search_mode fast --bias hinge_ph4.bfp
+</pre>
