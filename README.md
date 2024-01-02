@@ -93,5 +93,5 @@ cannot be combined with other types of biases ( don , acc , aro ) in the same ex
 </ul>
 <p>Bias-docking example:</p>
 <pre lang="shell">
-    unidock --config dock.conf --ligand_index actives.index --dir actives_out --search_mode fast --bias hinge_ph4.bfp
+    unidock --config dock.conf --ligand_index actives.index --dir actives_out --search_mode fast --bias hinge_ph4.bpf
 </pre>
