@@ -81,3 +81,13 @@ x y z Vset r type
 5.100 1.785 20.019 -1.75 1.10 map 
 9.459 2.075 24.527 -2.00 0.80 map
 </pre>
+<p>Bias parameter file format requirements</p>
+<ul>
+   <li>All lines must have 6 columns. The columns must be space or tab separated.</li> 
+   <li>Lines are ignored if the first column is not numeric (e.g., header with titles - x, y, z, V set , r, type - in the examples above). </li> 
+   <li>The first three columns define the x,y,z coordinates of the bias site center, in Å.</li>
+   <li>The fourth column corresponds to the energy reward ( V set ), in kcal/mol, to be applied at the bias site center. It has to be a negative number . If there is no thermodynamic information for the site, a reasonable value is -2.0 kcal/mol, which sets a relatively strong bias.</li>
+   <li>The fifth column is the radius ( r ) of the bias site, in Å. It controls the extent of energy reward through space according to a Gaussian function -see equation in Figure 1-. A reasonable value range that builds a well defined bias site is between 0.6 and 1.2 Å.</li>
+   <li>The last column indicates the type of bias and, in consequence, which energy maps will be modified: (1)acc modifies NA and OA maps;(2) don modifies HD maps; (3)aro creates an ad hoc new map (AC, aromatic center map) ;(4)map modifies the energy map specified in the -m argument.IMPORTANT: map biases
+cannot be combined with other types of biases ( don , acc , aro ) in the same execution of the program.</li>
+</ul>
