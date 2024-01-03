@@ -25,6 +25,11 @@ sdf2unidocksdf.py actives_final.sdf actives_prep.sdf
 <pre lang="shell">
 obabel -isdf actives_prep.sdf -osdf -O actives/actives-.sdf -m
 </pre>
+<p>You can use shell command to split the SDF：</p>
+<pre line="1" lang="shell">
+csplit actives_prep.sdf /"\$\$\$\$"/ --suppress-matched --prefix=actives- --suffix-format=%05d.sdf '{*}'
+</pre>
+<p>It will generate files such as actives-00001.sdf,actives-00002.sdf....</p>
 <h3>Generate ligand index</h3>
 <pre lang="shell">
 ls actives/*.sdf >> actives.index
