@@ -100,15 +100,15 @@ cannot be combined with other types of biases ( don , acc , aro ) in the same ex
 <pre lang="shell">
 unidock --config dock.conf --ligand_index actives.index --dir actives_out --search_mode fast --bias hinge_ph4.bpf
 </pre>
-<h2>用DCU进行计算</h2>
-<p>准备DC_batch_5.sh:</p>
+<h2>Use DCU to carry out docking</h2>
+<p>Prepare a docking scrript such as DC_batch_5.sh:</p>
 <pre lang="shell">
 unidock="/public/software/apps/unidock/install/bin/unidock"
 export LD_LIBRARY_PATH=/public/software/apps/unidock/boost_1_72_0/build_sif/lib:$LD_LIBRARY_PATH
 cd /work/home/achktgbwrc/cu2_unidock_evaluation
 $unidock --ligand_index /work/home/achktgbwrc/index/DC_batch_5.index --config dock.conf --dir DC_batch_5 --search_mode fast
 </pre>
-<p>准备SLURM脚本:</p>
+<p>Prepare a SLURM script such as DC_batch_5.slurm:</p>
 <pre lang="shell">
 #!/bin/bash
 #SBATCH -J DC_batch_5
@@ -126,4 +126,8 @@ export BOOST_LIBRARYDIR=$BOOST_ROOT/lib
 export SINGULARITYENV_LD_LIBRARY_PATH="${BOOST_ROOT}:\$LD_LIBRARY_PATH"
 
 singularity exec -B /public:/public -B /work:/work /public/software/apps/DeepLearning/singularity/centos7.6-mpi4.0-gcc9.3-cmake3.21-make4.2-glibc2.29-glibcxx3.4.26-py3.8-dtk23.10.sif bash -c "source /opt/dtk/env.sh && source /opt/dtk/cuda/env.sh && bash DC_batch_5.sh"
+</pre>
+<p>Submit jobs:</p>
+<pre lang="shell">
+sbatch DC_batch_5.slurm
 </pre>
