@@ -57,6 +57,12 @@ obabel -isdf actives_dock.sdf -osdf -O actives_dock_noH.sdf -d
 <pre lang="shell">
 obabel -isdf actives_dock_noH.sdf -osdf -O actives_dock_addH.sdf -h
 </pre>
+<h2>preapre unidock SDF with <a href="https://github.com/dptech-corp/Uni-Dock/tree/main/unidock_tools">unidock_tools </a>(main branch) </h2>
+<pre lang="python">
+from unidock_tools.ligandPrepare import prepare_ligands
+ligs=['4fv2_ligand.sdf',]
+prepare_ligands(ligs,output_dir='.')
+</pre>
 <h2>Bias docking</h2>
 <p>The user must prepare a bias parameter file (BPF) containing all the information for the different biases to be applied. The BPF contains one line for each bias, with the following parameters: </p>
 <ul>
@@ -130,11 +136,5 @@ singularity exec -B /public:/public -B /work:/work /public/software/apps/DeepLea
 <p>Submit jobs:</p>
 <pre lang="shell">
 sbatch DC_batch_5.slurmfrom unidock_tools.ligandPrepare import prepare_ligands
-</pre>
-<h2>Use <a href="https://github.com/dptech-corp/Uni-Dock/tree/main/unidock_tools">unidock_tools main branch</a> to preapre unidock SDF</h2>
-<pre lang="python">
-from unidock_tools.ligandPrepare import prepare_ligands
-ligs=['4fv2_ligand.sdf',]
-prepare_ligands(ligs,output_dir='.')
 </pre>
 
