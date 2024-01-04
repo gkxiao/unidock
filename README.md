@@ -129,5 +129,12 @@ singularity exec -B /public:/public -B /work:/work /public/software/apps/DeepLea
 </pre>
 <p>Submit jobs:</p>
 <pre lang="shell">
-sbatch DC_batch_5.slurm
+sbatch DC_batch_5.slurmfrom unidock_tools.ligandPrepare import prepare_ligands
 </pre>
+<h2>Use Unidock_tools (main branch) to preapre unidock SDF</h2>
+<pre lang="python">
+from unidock_tools.ligandPrepare import prepare_ligands
+ligs=['4fv2_ligand.sdf',]
+prepare_ligands(ligs,output_dir='.')
+</pre>
+
