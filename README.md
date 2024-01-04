@@ -16,7 +16,7 @@
 ![tree comparison](https://github.com/gkxiao/unidock_ligand_preparation/blob/main/build_tree_58_rev.jpg)
 <p>Figure 1. Left:before the revision;  Middle: Meeko;  Right: after the revision</p>
 
-<h2>ligand preparation</h2>
+<h2>Preapre unidock SDF with <a href="https://github.com/dptech-corp/Uni-Dock/tree/mcdock/unidock_tools">unidock_tools</a> (mcdock branch)</h2>
 <h3>Translate SDF into Unidock-style SDF</h3>
 <pre lang="shell">
 sdf2unidocksdf.py actives_final.sdf actives_prep.sdf
@@ -57,7 +57,7 @@ obabel -isdf actives_dock.sdf -osdf -O actives_dock_noH.sdf -d
 <pre lang="shell">
 obabel -isdf actives_dock_noH.sdf -osdf -O actives_dock_addH.sdf -h
 </pre>
-<h2>preapre unidock SDF with <a href="https://github.com/dptech-corp/Uni-Dock/tree/main/unidock_tools">unidock_tools </a>(main branch) </h2>
+<h2>Preapre unidock SDF with <a href="https://github.com/dptech-corp/Uni-Dock/tree/main/unidock_tools">unidock_tools </a>(main branch) </h2>
 <pre lang="python">
 from unidock_tools.ligandPrepare import prepare_ligands
 ligs=['4fv2_ligand.sdf',]
