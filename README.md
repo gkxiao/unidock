@@ -109,7 +109,7 @@ unidock --config dock.conf --ligand_index actives.index --dir actives_out --sear
 <h2>Multi-Conformation Docking (MCDOCK)</h2>
 <p>Tutorial: <a href="https://nb.bohrium.dp.tech/detail/91221652314"></a>https://nb.bohrium.dp.tech/detail/91221652314</a></p>
 
-<p>The rigid- and flexible-docking is achieved by the using fragment information.</p>
+<p>The rigid- and flexible-docking is achieved by the using different fraginfo tag.</p>
 <p>This is a example of fragment information for flexible-docking：</p>
 <pre lang="shell">
 &gt;  &lt;fragInfo&gt;
