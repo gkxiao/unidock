@@ -131,9 +131,10 @@ unidock --config dock.conf --ligand_index actives.index --dir actives_out --sear
 &gt;  &lt;fragInfo&gt;
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
 </pre>
-
-
-
+<p>If you need to relax pose, make sure to use flexible fragment information and carry out a local only search：</p>
+<pre lang="shell">
+unidock --config dock.conf --ligand_index pose.index --dir relax_out --exhaustiveness 512 --max_step 40 --num_modes 1 --verbosity 2 --refine_step 5 --keep_nonpolar_H --local_only
+</pre>pre>
 <h2>Use DCU to carry out docking</h2>
 <p>Prepare a docking scrript such as DC_batch_5.sh:</p>
 <pre lang="shell">
