@@ -106,7 +106,7 @@ cannot be combined with other types of biases ( don , acc , aro ) in the same ex
 <pre lang="shell">
 unidock --config dock.conf --ligand_index actives.index --dir actives_out --search_mode fast --bias hinge_ph4.bpf
 </pre>
-<h2>MCDock</h2>
+<h2>Multi-Conformation Docking (MCDOCK)</h2>
 <p>Tutorial: <a href="https://nb.bohrium.dp.tech/detail/91221652314"></a>https://nb.bohrium.dp.tech/detail/91221652314</a></p>
 <h2>Use DCU to carry out docking</h2>
 <p>Prepare a docking scrript such as DC_batch_5.sh:</p>
