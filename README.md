@@ -135,6 +135,6 @@ singularity exec -B /public:/public -B /work:/work /public/software/apps/DeepLea
 </pre>
 <p>Submit jobs:</p>
 <pre lang="shell">
-sbatch DC_batch_5.slurmfrom unidock_tools.ligandPrepare import prepare_ligands
+sbatch DC_batch_5.slurm
 </pre>
 
