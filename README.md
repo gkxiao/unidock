@@ -133,8 +133,10 @@ unidock --config dock.conf --ligand_index actives.index --dir actives_out --sear
 </pre>
 <p>If you need to relax pose, make sure to use flexible fragment information and carry out a local only search：</p>
 <pre lang="shell">
-unidock --config dock.conf --ligand_index pose.index --dir relax_out --exhaustiveness 512 --max_step 40 --num_modes 1 --verbosity 2 --refine_step 5 --keep_nonpolar_H --local_only
-</pre>pre>
+unidock --config dock.conf --ligand_index pose.index --dir relax_out \
+    --exhaustiveness 512 --max_step 40 --num_modes 1 --verbosity 2 \
+    --refine_step 5 --keep_nonpolar_H --local_only
+</pre>
 <h2>Use DCU to carry out docking</h2>
 <p>Prepare a docking scrript such as DC_batch_5.sh:</p>
 <pre lang="shell">
