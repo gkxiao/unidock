@@ -135,6 +135,9 @@ unidock --config dock.conf --ligand_index actives.index --dir actives_out --sear
 &gt;  &lt;fragInfo&gt;
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
 </pre>
+
+<p>When performing rigid docking, only the fragInfo and atomInfo tags are required and torsionInfo tag should be deleted.</p>
+
 <p>If you need to relax pose, make sure to use flexible fragInfo tag and carry out a local only search：</p>
 <pre lang="shell">
 unidock --config dock.conf --ligand_index pose.index --dir relax_out \
