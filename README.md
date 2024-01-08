@@ -105,6 +105,11 @@ x y z Vset r type
 <pre lang="shell">
 unidock --config dock.conf --ligand_index actives.index --dir actives_out --search_mode fast --bias hinge_ph4.bpf
 </pre>
+
+<h2>Use water site to generate BPF for bias docking</h2>
+<p>Elias D. López, et al. WATCLUST: a tool for improving the design of drugs based on protein-water interactions, Bioinformatics, 2015,31(22):3697–3699. https://doi.org/10.1093/bioinformatics/btv411</p>
+<p>Watclust: <a href=" http://sbg.qb.fcen.uba.ar/watclust">http://sbg.qb.fcen.uba.ar/watclust</a></p>
+
 <h2>Multi-Conformation Rigid Docking (MCDOCK)</h2>
 <p>Tutorial: <a href="https://nb.bohrium.dp.tech/detail/91221652314"></a>https://nb.bohrium.dp.tech/detail/91221652314</a></p>
 
