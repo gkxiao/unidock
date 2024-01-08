@@ -109,8 +109,8 @@ unidock --config dock.conf --ligand_index actives.index --dir actives_out --sear
 <h2>Multi-Conformation Rigid Docking (MCDOCK)</h2>
 <p>Tutorial: <a href="https://nb.bohrium.dp.tech/detail/91221652314"></a>https://nb.bohrium.dp.tech/detail/91221652314</a></p>
 
-<p>The rigid- and flexible-docking is achieved by the using different fraginfo tag.</p>
-<p>This is a example of fragment information for flexible-docking：</p>
+<p>The rigid- and flexible-docking is achieved by the using different fragInfo tag.</p>
+<p>This is a example of fragInfo tag for flexible-docking：</p>
 <pre lang="shell">
 &gt;  &lt;fragInfo&gt;
 1 2 3 4 5 30 31 32 33 34
@@ -126,12 +126,12 @@ unidock --config dock.conf --ligand_index actives.index --dir actives_out --sear
 44 45 46 47
 </pre>
 
-<p>This is a example of fragment information for rigid-docking：</p>
+<p>This is a example of fragInfor tag for rigid-docking：</p>
 <pre lang="shell">
 &gt;  &lt;fragInfo&gt;
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
 </pre>
-<p>If you need to relax pose, make sure to use flexible fragment information and carry out a local only search：</p>
+<p>If you need to relax pose, make sure to use flexible fragInfo tag and carry out a local only search：</p>
 <pre lang="shell">
 unidock --config dock.conf --ligand_index pose.index --dir relax_out \
     --exhaustiveness 512 --max_step 40 --num_modes 1 --verbosity 2 \
