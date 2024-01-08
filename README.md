@@ -108,6 +108,31 @@ unidock --config dock.conf --ligand_index actives.index --dir actives_out --sear
 </pre>
 <h2>Multi-Conformation Docking (MCDOCK)</h2>
 <p>Tutorial: <a href="https://nb.bohrium.dp.tech/detail/91221652314"></a>https://nb.bohrium.dp.tech/detail/91221652314</a></p>
+
+<p>The rigid- and flexible-docking is achieved by the using fragment information.</p>
+<p>This is a example of fragment information for flexible-docking：</p>
+<pre lang="shell">
+&gt;  &lt;fragInfo&gt;
+1 2 3 4 5 30 31 32 33 34
+6 7 8
+9 10 11 12
+13 14 15 16 21 22 23 28 29
+17 18 19 20
+24 25 26 27
+35
+36
+37 38 39
+40 41 42 43
+44 45 46 47
+</pre>
+
+<p>This is a example of fragment information for rigin-docking：</p>
+<pre lang="shell">
+#!/bin/bash
+</pre>
+
+
+
 <h2>Use DCU to carry out docking</h2>
 <p>Prepare a docking scrript such as DC_batch_5.sh:</p>
 <pre lang="shell">
